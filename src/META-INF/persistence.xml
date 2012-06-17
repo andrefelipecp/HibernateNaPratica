@@ -7,17 +7,20 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		
 		<class>br.com.devandrepereira.domain.Usuario</class>
-
+		<class>br.com.devandrepereira.domain.Grupo</class>
+		<class>br.com.devandrepereira.domain.Permissao</class>
+		<class>br.com.devandrepereira.domain.GrupoPermissao</class>
+		
 		<properties>
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
 			<property name="hibernate.dialect" 
 			    value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="transaction.factory_class" 
 			    value="org.hibernate.transaction.JDBCTransactionFactory" />
-			<property name="connection.url" 
-			    value="jdbc:postgresql://localhost:5433/MeuBanco"/>
-			<property name="connection.username" value="postgres"/>
-			<property name="connection.password" value="postgres"/>
+			<property name="javax.persistence.jdbc.url" 
+			    value="jdbc:postgresql://localhost:5432/MeuBD"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="postgres"/>
 			<property name="hibernate.show_sql" value="true" />
 		</properties>
 
